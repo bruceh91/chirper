@@ -4,7 +4,6 @@ class PostButton extends React.Component {
     handleClick(e){
         const chirp = e.target.value;
         this.props.postChirp(chirp);
-        console.log('second')
     }
 
     render (){
