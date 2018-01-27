@@ -1,14 +1,15 @@
 import React from 'react';
 
-class Chirp extends React.Component {
-
-    render (){
+const Chirp = (props) => {
+    console.log('third');
+    let chirpList = props.chirp.map((chirpArr, timeArr)=> {
+        return <h5 key={timeArr}  className="mx-auto col-10 mt-4 mb-4 d-flex border rounded p-4 align-items-start font-weight-light">{chirpArr.value}</h5>
+    })
         return (
-            <h5 className="mx-auto m-4 d-flex align-items-start font-weight-light"> THIS IS CHIRP {this.props.input}</h5>
+            <div className="mx-auto">
+               {chirpList} 
+            </div>
         )
-        
-    }
-
-};
+    };
 
 export default Chirp;

@@ -2,12 +2,12 @@ import React from 'react';
 
 class PostInput extends React.Component {
     handleChange(e){
-        const title = e.target.value;
-        this.props.changeTitle(title);
+        const input = e.target.value;
+        const temp = {value: input}
+        this.props.changeInput(temp);
     }
 
     render (){
-        // console.log('input rendered');
         return <input 
         onChange={this.handleChange.bind(this)}
         placeholder="What's happening?" 
